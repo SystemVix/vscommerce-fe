@@ -1,24 +1,12 @@
-import carrinhoImg from "./assets/carrinho.svg";
-import computadorImg from "./assets/computer.png";
 import './App.css'
+import computadorImg from "./assets/computer.png";
+import HeaderClient from "./components/HeaderClient";
 
 function App()
 {
   return (
     <>
-      <header className="vsc-header-client">
-        <nav className="vsc-container">
-          <h1>VS-Commerce</h1>
-          <div className="vsc-navbar-right">
-            <div className="vsc-menu-items-container">               
-              <div className="vsc-menu-item">
-                <img src={carrinhoImg} alt="Carrinho"/>
-              </div>
-            </div>
-            <a href="#">Entrar</a>
-          </div>
-        </nav>
-      </header>
+      <HeaderClient/>
       <main>
         <section id="product-details-section" className="vsc-container">
           <div className="vsc-card vsc-mb20">
