@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* GLOBAIS ---------------------------------- */
 :root
 {
    --cor-fundo-primaria: #fffaf0;
@@ -44,6 +45,7 @@ main
 {
    padding: 0 20px;
 }
+/* GLOBAIS - FIM ---------------------------- */
 
 /* GENÉRICOS -------------------------------- */
 .vsc-container
@@ -97,12 +99,6 @@ nav a
 {
    font-size: 16px;
    font-weight: 700;
-}
-
-.vsc-header-client
-{
-   background-color: var(--cor-fundo-secundaria);
-   color: var(--cor-fonte-preta);
 }
 
 .vsc-header-admin
@@ -173,20 +169,6 @@ nav a
    height: 42px;   
    justify-content: center;
    width: 100%;   
-}
-
-.vsc-btn-color
-{
-   background-color: var(--cor-fundo-botao-colorido);
-   border: none;
-   color: var(--cor-fonte-terciaria);   
-}
-
-.vsc-btn-white
-{
-   background-color: var( --cor-fundo-botao-branco);
-   border: 1px solid var(--cor-borda-card);
-   color: var(--cor-fonte-secundaria);   
 }
 
 .vsc-btn-page-container

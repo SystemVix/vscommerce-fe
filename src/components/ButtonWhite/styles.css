@@ -1,0 +1,6 @@
+.vsc-btn-white
+{
+   background-color: var( --cor-fundo-botao-branco);
+   border: 1px solid var(--cor-borda-card);
+   color: var(--cor-fonte-secundaria);   
+}

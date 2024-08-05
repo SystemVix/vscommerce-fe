@@ -1,0 +1,6 @@
+.vsc-btn-color
+{
+   background-color: var(--cor-fundo-botao-colorido);
+   border: none;
+   color: var(--cor-fonte-terciaria);   
+}
