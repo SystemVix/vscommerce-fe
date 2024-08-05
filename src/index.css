@@ -177,69 +177,7 @@ nav a
    grid-gap: 20px;
    width: 100%;   
 }
-
-.vsc-btn-next-page
-{   
-   background-color: var(--cor-fundo-botao-branco);
-   border: 1px solid var(--cor-borda-card);
-   border-radius: 4px;
-   color: var(--cor-fonte-secundaria);
-   cursor: pointer;
-   font-size: 16px;
-   font-weight: 700;
-   padding: 10px;
-   text-align: center;
-}
 /* BOTÕES - FIM ----------------------------- */
-
-/* BARRA BUSCA ------------------------------ */
-.vsc-search-bar
-{
-   color: var(--cor-fonte-primaria);
-   display: flex;
-   height: 40px;
-}
-
-.vsc-search-bar button
-{
-   background-color: var(--cor-fundo-botao-branco);
-   border: 1px solid var(--cor-borda-card);
-   cursor: pointer;
-   width: 40px;
-}
-
-.vsc-search-bar button[type="submit"]
-{
-   border-radius: 4px 0 0 4px;
-   border-right: none;   
-}
-
-.vsc-search-bar button[type="reset"]
-{
-   border-left: none;
-   border-radius: 0 4px 4px 0;
-}
-
-.vsc-search-bar input
-{
-   border: 1px solid var(--cor-borda-card);
-   border-left: none;
-   border-right: none;
-   color: var(--cor-fonte-primaria);
-   padding: 0 10px;
-   width: calc(100% - 80px);
-}
-
-.vsc-search-bar input:focus
-{
-   outline: none;   
-}
-
-.vsc-search-bar input::placeholder
-{
-   color: var(--cor-fonte-primaria);   
-}
-/* BARRA BUSCA - FIM ------------------------ */
 
 /* FORMULÁRIOS ------------------------------ */
 .vsc-form
