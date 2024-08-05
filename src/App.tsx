@@ -1,23 +1,8 @@
-import "./App.css";
-import ButtonColor from "./components/ButtonColor";
-import ButtonWhite from "./components/ButtonWhite";
-import HeaderClient from "./components/HeaderClient";
-import ProductDetailsCard from "./components/ProductDetailsCard";
+import ProductDetails from "./routes/ProductDetails";
 
 function App() {
   return (
-    <>
-      <HeaderClient />
-      <main>
-        <section id="product-details-section" className="vsc-container">
-          <ProductDetailsCard/>
-          <div className="vsc-btn-page-container">
-            <ButtonColor />
-            <ButtonWhite />
-          </div>
-        </section>
-      </main>
-    </>
+    <ProductDetails/>
   );
 }
 
