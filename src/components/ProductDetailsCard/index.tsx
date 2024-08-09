@@ -19,8 +19,8 @@ export default function ProductDetailsCard()
                voluptates, quos beatae.
             </p>
             <div className="vsc-category-container">
-               <ProductCategory/>
-               <ProductCategory/>
+               <ProductCategory name="Eletrônicos"/>
+               <ProductCategory name="Computadores"/>
             </div>
          </div>
       </div>
