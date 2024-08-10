@@ -38,8 +38,8 @@ export default function ProductDetails()
         <section id="product-details-section" className="vsc-container">
           <ProductDetailsCard product={product}/>
           <div className="vsc-btn-page-container">
-            <ButtonColor/>
-            <ButtonWhite/>
+            <ButtonColor text='Comprar'/>
+            <ButtonWhite text='Início'/>
           </div>
         </section>
       </main>

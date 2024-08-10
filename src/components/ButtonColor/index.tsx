@@ -1,10 +1,15 @@
 import './styles.css';
 
-export default function ButtonColor()
+type Props =
 {
-   return(
+   text: string;
+}
+
+export default function ButtonColor({text}: Props)
+{
+   return (
       <div className="vsc-btn vsc-btn-color">
-         Comprar
+         {text}
       </div>
    );
 }
