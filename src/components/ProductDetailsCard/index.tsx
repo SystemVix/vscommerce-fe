@@ -1,26 +1,30 @@
 import "./styles.css";
-import computadorImg from "../../assets/computer.png";
 import ProductCategory from "../ProductCategory";
+import { ProductDto } from "../../models/product";
 
-export default function ProductDetailsCard()
+type Props =
+{
+   product: ProductDto;
+}
+
+export default function ProductDetailsCard({product}: Props)
 {
    return (
       <div className="vsc-card vsc-mb20">
          <div className="vsc-product-details-top vsc-line-bottom">
-            <img src={computadorImg} alt="Computador" />
+            <img src={product.imageUri} alt={product.name} />
          </div>
          <div className="vsc-product-details-bottom">
-            <h3>R$ 5.000,00</h3>
-            <h4>Computador Gamer XT</h4>
-            <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-               labore eum vitae, corrupti ad id similique! Illo dolores ullam numquam
-               laudantium modi aut, veniam exercitationem architecto veritatis
-               voluptates, quos beatae.
-            </p>
+            <h3>R$ {product.priceTable.toFixed(2)}</h3>
+            <h4>{product.name}</h4>
+            <p>{product.description}</p>
             <div className="vsc-category-container">
-               <ProductCategory name="Eletrônicos"/>
-               <ProductCategory name="Computadores"/>
+               {
+                  product.categories.map(item =>
+                  (
+                     <ProductCategory key={item.id_category} name={item.name}/>
+                  ))
+               }              
             </div>
          </div>
       </div>
