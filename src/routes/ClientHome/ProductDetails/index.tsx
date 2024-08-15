@@ -1,9 +1,8 @@
 import './styles.css';
-import ButtonColor from "../../components/ButtonColor";
-import ButtonWhite from "../../components/ButtonWhite";
-import HeaderClient from "../../components/HeaderClient";
-import ProductDetailsCard from "../../components/ProductDetailsCard";
-import { ProductDto } from '../../models/product';
+import { ProductDto } from '../../../models/product';
+import ButtonColor from "../../../components/ButtonColor";
+import ButtonWhite from "../../../components/ButtonWhite";
+import ProductDetailsCard from "../../../components/ProductDetailsCard";
 
 const product: ProductDto =
 {
@@ -31,9 +30,8 @@ const product: ProductDto =
 
 export default function ProductDetails()
 {
-   return(
-      <>
-      <HeaderClient/>
+  return (
+    <>      
       <main>
         <section id="product-details-section" className="vsc-container">
           <ProductDetailsCard product={product}/>
@@ -44,6 +42,6 @@ export default function ProductDetails()
         </section>
       </main>
     </>
-   );
+  );
 }
 

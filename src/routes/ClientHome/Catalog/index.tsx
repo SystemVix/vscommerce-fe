@@ -1,9 +1,8 @@
 import './styles.css';
-import HeaderClient from '../../components/HeaderClient';
-import SearchBar from '../../components/SearchBar';
-import CatalogCard from '../../components/CatalogCard';
-import ButtonNextPage from '../../components/ButtonNextPage';
-import { ProductDto } from '../../models/product';
+import { ProductDto } from '../../../models/product';
+import ButtonNextPage from '../../../components/ButtonNextPage';
+import CatalogCard from '../../../components/CatalogCard';
+import SearchBar from '../../../components/SearchBar';
 
 const product: ProductDto =
 {
@@ -33,7 +32,6 @@ export default function Catalog()
 {
    return(
       <>
-         <HeaderClient/>
          <main>
             <section id="catalog-section" className="vsc-container">
                <SearchBar/>
