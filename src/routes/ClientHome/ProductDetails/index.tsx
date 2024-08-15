@@ -1,40 +1,24 @@
 import './styles.css';
-import { ProductDto } from '../../../models/product';
 import ButtonColor from "../../../components/ButtonColor";
 import ButtonWhite from "../../../components/ButtonWhite";
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
-
-const product: ProductDto =
-{
-  id_product: 2,
-  name: "Smart TV Monitor",
-  description: "TV e Monitor 40'' Full HD",
-  priceTable: 2500.99,
-  imageUri: "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/2-big.jpg",
-  categories:
-  [
-    {
-      id_category: 2,
-      name: "Eletrônicos"
-    },
-    {
-      id_category: 3,
-      name: "Computadores"
-    },
-    {
-      id_category: 4,
-      name: "Importados"
-    }    
-  ]
-}
+import * as productService from '../../../services/product-service';
+import { useParams } from 'react-router-dom';
 
 export default function ProductDetails()
 {
+  const params = useParams();
+  
+  const product = productService.findById(Number(params.productId));
+
   return (
     <>      
       <main>
         <section id="product-details-section" className="vsc-container">
-          <ProductDetailsCard product={product}/>
+          {
+            product && /* Testa se o objeto não é undefined */
+            <ProductDetailsCard product={product}/>
+          }          
           <div className="vsc-btn-page-container">
             <ButtonColor text='Comprar'/>
             <ButtonWhite text='Início'/>
