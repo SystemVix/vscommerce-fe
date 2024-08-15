@@ -4,6 +4,7 @@ import ButtonWhite from "../../../components/ButtonWhite";
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
 import * as productService from '../../../services/product-service';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function ProductDetails()
 {
@@ -21,7 +22,9 @@ export default function ProductDetails()
           }          
           <div className="vsc-btn-page-container">
             <ButtonColor text='Comprar'/>
-            <ButtonWhite text='Início'/>
+            <Link to="/">
+              <ButtonWhite text='Início'/>
+            </Link>            
           </div>
         </section>
       </main>
