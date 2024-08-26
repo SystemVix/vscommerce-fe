@@ -2,7 +2,7 @@ import './styles.css';
 import ButtonColor from "../../../components/ButtonColor";
 import ButtonWhite from "../../../components/ButtonWhite";
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ProductDto } from '../../../models/product';
 import * as productService from '../../../services/product-service.ts';
@@ -10,15 +10,19 @@ import * as productService from '../../../services/product-service.ts';
 export default function ProductDetails()
 {
   const params = useParams();
-
+ 
   const [product, setProduct] = useState<ProductDto>();
+
+  const navigate = useNavigate();
 
   useEffect (() => {
     productService.findById(Number(params.productId))
       .then(response => {
-        console.log(response.data);
         setProduct(response.data);
-      })    
+      })
+      .catch(() => {
+        navigate("/");
+      });    
   }, []);
     
   return (

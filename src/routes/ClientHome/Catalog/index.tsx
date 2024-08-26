@@ -15,7 +15,7 @@ export default function Catalog()
       productService.findAll()
       .then(response => {
          setProducts(response.data.content);
-      })
+      });
    }, []);
 
    return (
